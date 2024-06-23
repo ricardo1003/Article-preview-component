@@ -113,7 +113,6 @@ article nav > .active img{
 #share-activated{
     position: absolute;
     padding: 1rem 2.5rem;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -131,7 +130,7 @@ article nav > .active img{
     content: "";
     width: 20px;
     aspect-ratio: 1/1;
-    bottom: -20px;
+    bottom: -19px;
     left: 46%;
     display: block;
     position: absolute;
@@ -152,8 +151,12 @@ article nav > .active img{
 #share-activated picture img{
     height: 16px;
 }
-
-
+.active{
+    display: flex;
+}
+.unactive{
+    display: none;
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
