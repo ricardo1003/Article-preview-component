@@ -16,7 +16,6 @@ main{
     max-width: 675px;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
     box-sizing: border-box;
     
     border-radius: 10px;
@@ -89,10 +88,13 @@ article nav >:first-child p{
 article nav > :last-child{
     width: 35px;
     aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
     border-radius: 100px;
-    background: hsla(212, 23%, 69%, 25%) url("../images/icon-share.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: hsla(212, 23%, 69%, 25%);
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     -ms-border-radius: 100px;
@@ -100,12 +102,56 @@ article nav > :last-child{
 }
 
 
-
-
-#share-activated{
-    display: none;
+article nav > .active{
+    background-color: hsl(217, 19%, 35%);
+}
+article nav > .active img{
+    filter: brightness(0) invert();
+    -webkit-filter: brightness(0) invert();
 }
 
+#share-activated{
+    position: absolute;
+    padding: 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    bottom: 55px;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+    box-shadow: 0 5px 15px hsla(214, 17%, 51%, 50%);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#share-activated::after{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+    bottom: -20px;
+    left: 46%;
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+}
+
+
+#share-activated p{
+    letter-spacing: 5px;
+    margin: 0;
+    color: hsl(212, 23%, 69%);
+}
+#share-activated picture{
+    display: flex;
+    gap: 10px;
+}
+#share-activated picture img{
+    height: 16px;
+}
 
 
 
