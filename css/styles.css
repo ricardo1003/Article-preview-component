@@ -18,7 +18,7 @@ main{
     flex-wrap: wrap;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: hsl(210, 46%, 95%);
+    background-color: #fff;
     box-shadow: 0 10px 100px hsla(214, 17%, 51%, 50%);
 
     -webkit-border-radius: 10px;
